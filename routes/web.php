@@ -41,6 +41,20 @@ Route::get('/', function (Request $request) {
     // echo get_class($ctr->increase());
     // return view('welcome');
     // echo _TEXT_;
+    // $cURLConnection = curl_init();
+
+    // curl_setopt($cURLConnection, CURLOPT_URL, 'https://httpbin.org/get');
+    // curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+    // // curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
+    // //     'Content-Type: application/json',
+    // // ));
+    // $phoneList = curl_exec($cURLConnection);
+    // curl_close($cURLConnection);
+    
+    // $jsonArrayResponse = json_encode(json_decode($phoneList));
+    // echo "<prev>";
+    // print_r($jsonArrayResponse);
+    // echo "</prev>";
 });
 // Route::get('/get-user', function () {
 //     $data = User::getByEmail("tmpdz7820@gmail.com");
@@ -49,4 +63,4 @@ Route::get('/', function (Request $request) {
 //     echo "</br>";
 //     printf($data_2);
 // });
-Route::get('/allUser',[UserController::class,'index']);
+Route::get('/allUser', [UserController::class, 'index']);
